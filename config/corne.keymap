@@ -39,10 +39,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W        &kp E           &kp R                    &kp T             &kp Y          &kp U                           &kp I            &kp O        &kp P             &none
-&none  &kp A  &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_GUI F           &kp G             &kp H          &mt RIGHT_GUI J                 &mt RIGHT_ALT K  &mt RCTRL L  &kp SINGLE_QUOTE  &none
-&none  &kp Z  &mt LG(X) X  &mt LG(C) C     &mt LG(V) V              &kp B             &kp N          &kp M                           &kp COMMA        &kp DOT      &mt COLON SLASH   &none
-                           &lt 1 ESC       &mt LS(LA(LCTRL)) SPACE  &kp LEFT_SHIFT    &kp BACKSPACE  &mt LS(LA(LC(LEFT_GUI))) ENTER  &lt 2 TAB
+&none  &kp Q  &kp W        &kp E           &kp R           &kp T             &kp Y          &kp U                 &kp I            &kp O        &kp P             &none
+&none  &kp A  &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_GUI F  &kp G             &kp H          &mt RIGHT_GUI J       &mt RIGHT_ALT K  &mt RCTRL L  &kp SINGLE_QUOTE  &none
+&none  &kp Z  &mt LG(X) X  &mt LG(C) C     &mt LG(V) V     &kp B             &kp N          &kp M                 &kp COMMA        &kp DOT      &mt COLON SLASH   &none
+                           &lt 1 ESC       &lt 4 SPACE     &kp LEFT_SHIFT    &kp BACKSPACE  &mt LEFT_SHIFT ENTER  &lt 2 TAB
             >;
         };
 
@@ -54,10 +54,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp N1             &kp N2         &kp N3           &kp N4       &kp N5    &kp N6      &kp N7    &kp N8  &kp N9     &kp N0     &none
-&none  &kp LG(LS(GRAVE))  &kp LG(GRAVE)  &kp LG(LS(TAB))  &kp LG(TAB)  &trans    &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &kp LG(LS(NUMBER_3))  &none
-&none  &kp LS(LC(TAB))    &kp LC(TAB)    &kp HOME         &kp END      &trans    &trans      &trans    &trans  &trans     &trans     &none
-                                         &trans           &trans       &trans    &kp DELETE  &trans    &trans
+&none  &kp N1             &kp N2         &kp N3           &kp N4       &kp N5           &kp N6      &kp N7            &kp N8            &kp N9            &kp N0                &none
+&none  &kp LG(LS(GRAVE))  &kp LG(GRAVE)  &kp LG(LS(TAB))  &kp LG(TAB)  &kp LC(LEFT)     &kp LEFT    &kp DOWN          &kp UP            &kp RIGHT         &kp LG(LS(NUMBER_3))  &none
+&none  &kp LS(LC(TAB))    &kp LC(TAB)    &kp HOME         &kp END      &kp LC(RIGHT)    &trans      &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &trans                &none
+                                         &trans           &trans       &trans           &kp DELETE  &trans            &trans
             >;
         };
 
@@ -70,7 +70,7 @@
 
             bindings = <
 &trans  &kp LS(POUND)  &kp LS(DLLR)   &kp LS(LBRC)  &kp LS(RBRC)  &kp BACKSLASH    &kp LS(STAR)   &kp N7  &kp N8  &kp N9  &kp LS(PLUS)  &trans
-&trans  &kp LBKT       &kp RBKT       &kp LS(LPAR)  &kp LS(RPAR)  &kp SEMI         &kp N0         &kp N4  &kp N5  &kp N6  &kp DOT       &trans
+&trans  &kp LBKT       &kp RBKT       &kp LS(LPAR)  &kp LS(RPAR)  &kp SEMI         &kp EQUAL      &kp N4  &kp N5  &kp N6  &kp N0        &trans
 &trans  &kp LS(CARET)  &kp LS(PRCNT)  &kp LS(AT)    &kp LS(EXCL)  &kp GRAVE        &kp LS(UNDER)  &kp N1  &kp N2  &kp N3  &kp MINUS     &trans
                                       &trans        &trans        &trans           &trans         &trans  &trans
             >;
@@ -82,6 +82,15 @@
 &trans  &trans        &trans        &trans        &trans        &kp C_BRIGHTNESS_DEC    &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp K_STOP  &kp K_PREV  &kp K_NEXT  &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR              &kp K_MUTE         &trans            &trans      &trans      &trans      &trans
                                     &trans        &trans        &trans                  &trans             &trans            &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans     &trans     &trans     &trans     &trans    &trans  &trans     &trans     &trans    &trans         &trans
+&trans  &trans     &trans     &trans     &trans     &trans    &trans  &kp TILDE  &kp SLASH  &kp PIPE  &kp AMPERSAND  &trans
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans    &trans  &kp COLON  &kp MINUS  &trans    &trans         &trans
+                              &trans     &trans     &trans    &trans  &trans     &trans
             >;
         };
     };
